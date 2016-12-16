@@ -1,0 +1,33 @@
+{
+  "name": "crawler-sandbox",
+  "private": "true",
+  "version": "0.0.1",
+  "description": "",
+  "author": "",
+  "main": "test.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "wdio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alincode/crawler-sandbox.git"
+  },
+  "keywords": [],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alincode/crawler-sandbox/issues"
+  },
+  "homepage": "https://github.com/alincode/crawler-sandbox#readme",
+  "devDependencies": {
+    "wdio-firefox-profile-service": "0.0.1",
+    "wdio-mocha-framework": "^0.5.7",
+    "wdio-phantomjs-service": "^0.2.2",
+    "wdio-selenium-standalone-service": "0.0.7"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "random-ua": "0.0.6",
+    "simplecrawler": "^1.0.3"
+  }
+}
