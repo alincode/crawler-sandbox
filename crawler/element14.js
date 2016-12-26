@@ -1,7 +1,7 @@
 // var config = require('../config.js');
 // var randomUA = require('random-ua');
 
-var ROOT_URL = 'http://cn.element14.com/';
+var ROOT_URL = 'http://cn.element14.com/prl/results';
 
 var Crawler = require('simplecrawler');
 var crawler = new Crawler(ROOT_URL);
