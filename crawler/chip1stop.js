@@ -15,12 +15,7 @@ crawler.on('crawlstart', function() {
 });
 
 crawler.addFetchCondition(function(queueItem, referrerQueueItem) {
-  return queueItem.path.indexOf('search\.do') > -1;
-});
-
-crawler.addFetchCondition(function(queueItem, referrerQueueItem) {
-  return queueItem.path.indexOf('dispDetail\.do') > -1 && queueItem.path.indexOf(
-    'otherZaikoDispFlg') == -1
+  return queueItem.path.indexOf('/web/TWN/zh/') > -1;
 });
 
 crawler.on('fetchcomplete', function(queueItem, responseBuffer, response) {
