@@ -1,4 +1,4 @@
-var ROOT_URL = 'http://www.chip1stop.com/';
+var ROOT_URL = 'http://www.chip1stop.com/web/TWN/zh/dispClassSearchTop.do';
 
 var Crawler = require('simplecrawler');
 var crawler = new Crawler(ROOT_URL);
