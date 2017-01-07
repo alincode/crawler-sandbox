@@ -15,7 +15,8 @@ crawler.on('crawlstart', function() {
 });
 
 crawler.addFetchCondition(function(queueItem, referrerQueueItem) {
-  return queueItem.path.indexOf('/web/TWN/zh/') > -1;
+  return queueItem.path.indexOf('search') > -1 || queueItem.path.indexOf(
+    'dispDetail') > -1;
 });
 
 crawler.on('fetchcomplete', function(queueItem, responseBuffer, response) {
