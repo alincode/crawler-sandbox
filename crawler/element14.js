@@ -1,21 +1,27 @@
-// var config = require('../config.js');
-// var randomUA = require('random-ua');
-
 var ROOT_URL = 'http://cn.element14.com/prl/results';
 
 var Crawler = require('simplecrawler');
 var crawler = new Crawler(ROOT_URL);
 var utils = require('utility');
+var cheerio = require('cheerio');
 var ApiService = require('../services/ApiService');
 
 crawler.interval = 30 * 1000;
 crawler.maxConcurrency = 1;
-crawler.decodeResponses = true;
+crawler.decodeResponses = false;
 crawler.urlEncoding = 'utf8';
+crawler.decompressResponses = false;
 
 crawler.on('crawlstart', function() {
   console.log('Crawl starting ', ROOT_URL);
 });
+
+crawler.discoverResources = function(buffer, queueItem) {
+  var $ = cheerio.load(buffer.toString("utf8"));
+  return $("a[href]").map(function() {
+    return $(this).attr("href");
+  }).get();
+};
 
 crawler.addFetchCondition(function(queueItem, referrerQueueItem) {
   return queueItem.path.indexOf('/dp/') > -1
