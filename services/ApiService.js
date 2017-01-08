@@ -6,7 +6,7 @@ function save(url, html) {
   let options = {
     method: 'POST',
     // rejectUnauthorized: true,
-    // uri: 'https://www.icquery.com/api/v1/parser',
+    // uri: 'https://www.icquery.com/api/v1/parsers',
     uri: 'http://114.35.96.3:9960/api/v1/parsers',
     // uri: 'http://127.0.0.1:9960/api/v1/parsers',
     body: {
@@ -18,7 +18,9 @@ function save(url, html) {
   };
 
   rp(options)
-    .then(function(body) {})
+    .then(function(body) {
+      console.log('body:', body);
+    })
     .catch(function(err) {
       console.log('send api-server bot api failure. because ', err.message)
     });
