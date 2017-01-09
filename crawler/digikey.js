@@ -1,3 +1,5 @@
+// supplierId = 1
+
 // 有假頁面
 var ROOT_URL = 'http://www.digikey.com.cn/search/zh/-/-/4077';
 

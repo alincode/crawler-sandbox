@@ -1,5 +1,8 @@
+// supplierId = 2
+
 // 有圖形驗證
-var ROOT_URL = 'http://www.mouser.cn/Electronic-Components/';
+var ROOT_URL =
+  'http://www.mouser.cn/Optoelectronics/LED-Lighting/LED-Emitters/_/N-8usfd/';
 
 var randomUA = require('random-ua');
 var Crawler = require('simplecrawler');

@@ -1,3 +1,4 @@
+// supplierId = 3
 var ROOT_URL = 'http://www.chip1stop.com/web/TWN/zh/dispClassSearchTop.do';
 
 var randomUA = require('random-ua');

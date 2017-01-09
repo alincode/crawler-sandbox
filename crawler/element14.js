@@ -1,3 +1,4 @@
+// supplierId = 5
 var ROOT_URL = 'http://cn.element14.com/prl/results';
 
 var Crawler = require('simplecrawler');

@@ -1,3 +1,4 @@
+// supplierId = 4
 var ROOT_URL =
   'http://china.rs-online.com/web/c/';
 
